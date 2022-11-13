@@ -49,3 +49,21 @@ describe('Test on the search tool', () => {
     cy.get('h5').should('have.length.above', 0);
   });
 });
+
+describe('Test the contact forms', () => {
+  it('must redirect to `Entre em Contato` page', () => {
+    cy.visit('https://www.phoebus.com.br/');
+
+    cy.xpath('//*[@id="menu-item-52"]/a').click();
+  });
+
+  it('should be possible to fill the forms and send the message', () => {
+    cy.xpath('//*[@id="wpcf7-f118-p14-o1"]/form/fieldset[1]/span[1]/input').type('cliente teste phoebus');
+    cy.xpath('//*[@id="wpcf7-f118-p14-o1"]/form/fieldset[1]/span[2]/input').type('cliente@test.com.br');
+    cy.xpath('//*[@id="wpcf7-f118-p14-o1"]/form/fieldset[1]/span[3]/input').type('83999999999');
+    cy.xpath('//*[@id="wpcf7-f118-p14-o1"]/form/fieldset[2]/span/textarea').type('Olá, caros da Phoebus! Aqui é um teste! Por Carlos');
+
+    cy.xpath('//*[@id="wpcf7-f118-p14-o1"]/form/fieldset[2]/input').click();
+  });
+
+});
