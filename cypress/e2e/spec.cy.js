@@ -1,4 +1,4 @@
-describe('Townsq front-page tests', () => {
+describe('Phoebus front-page tests', () => {
   it('should correctly visit and render the main page', () => {
     cy.visit('https://www.phoebus.com.br/');
   });
@@ -16,5 +16,9 @@ describe('Townsq front-page tests', () => {
   });
   it('confirms that `Nossos Diferenciais` are available', () => {
     cy.get('select').select('https://www.phoebus.com.br/quem-somos/diferenciais/')
-  })
-})
+  });
+
+  it('returns to the main page', () => {
+    cy.xpath('//*[@id="content-header"]/h1/a/img').click();
+  });
+});
