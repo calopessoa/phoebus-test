@@ -21,4 +21,15 @@ jobs:
         uses: cypress-io/github-action@v4.2.0
         with:
           build: npm run build
+
+  deploy-start:
+    runs-on: ubuntu-latest
+    environment:
+      name: tests
+      url: 'calo@tests.com'
+    needs: cypress-run
+    steps:
+      - name: Run build start script
+        uses: actions/setup-node@v1
+        with:
           start: npm run start
