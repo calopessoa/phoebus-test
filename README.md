@@ -8,12 +8,19 @@
 - xpath lib for Cypress
 - Github Actions
 
-### About GitHub Actions with Cypress:
+## About GitHub Actions with Cypress:
 
 A config to CI/CD with cypress tests was made, following the official documentation:
 https://docs.cypress.io/guides/continuous-integration/github-actions#Basic-Setup
 
 Within the Actions tab, it's possible for the tester to check and aprove the deployment process.
+
+### Demo Image:
+
+<div align="center">
+  <img width="440px" height="290px" src="/assets/actions.jpg" />
+</div>
+  
 
 ## Usage:
 
