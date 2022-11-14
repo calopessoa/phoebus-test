@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
+    "build": "echo \"Build running\"",
     "start": "node index.js"
   },
   "keywords": [],
